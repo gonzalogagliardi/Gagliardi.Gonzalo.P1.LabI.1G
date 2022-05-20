@@ -109,7 +109,7 @@ void mostrarTrabajo( eTrabajo unTrabajo, eMoto lista[], int tam, eColor colores[
             cargarDescripcionServicio(servicios, tamS, unTrabajo.idServicio, descServicio) == 1 &&
             cargarPrecioServicio(servicios, tamS, unTrabajo.idServicio, &precio) == 1 )
     {
-        printf(" %d     %-10s        %-10s     $%8d      %2d/%2d/%4d\n",
+        printf(" %d        %-10s         %-10s      $%d       %2d/%2d/%4d\n",
                unTrabajo.id,
                descColor,
                descServicio,

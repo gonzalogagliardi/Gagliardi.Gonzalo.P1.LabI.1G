@@ -29,6 +29,7 @@ int menu()
     printf("  7- Listar Servicios\n");
     printf("  8- Alta Trabajo\n");
     printf("  9- Listar Trabajos\n");
+    printf("  10- Informes\n");
     printf("  21- Salir\n");
     printf("Ingrese opcion: ");
     fflush(stdin);
@@ -141,7 +142,7 @@ void mostrarMoto(eMoto lista, eColor colores[], int tamCo, eTipo tipos[], int ta
     if (( cargarDescripcionColor( colores, tamCo, lista.idColor, descColor) == 1) &&
         (cargarDescripcionTipo(tipos, tamTipo, lista.idTipo, descTipo ) == 1) )
     {
-        printf(" %d     %10s    %10s             %10s      %d		%d \n",
+        printf(" %d     %10s    %10s          %10s        %d	  %d \n",
                lista.id,
                descColor,
                descTipo,
@@ -421,7 +422,7 @@ int cargarColorMoto( eMoto lista[], int tam, eColor colores[], int tamCo, int id
     return todoOk;
 }
 
-int validarBicicletaId( eMoto lista[], int tam, int id )
+int validarMotoId( eMoto lista[], int tam, int id )
 {
     int esValido = 0;
     if (lista != NULL && tam > 0)
